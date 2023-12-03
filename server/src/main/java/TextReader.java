@@ -19,6 +19,10 @@ public class TextReader {
              }
 
     }
+
+    public ArrayList getLines(){
+        return lines;
+    }
    
 
 }
