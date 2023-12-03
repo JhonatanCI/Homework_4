@@ -16,6 +16,20 @@ public class Client {
                 Demo.CallbackReceiverPrx.uncheckedCast(adapter.createProxy(
                     com.zeroc.Ice.Util.stringToIdentity("callbackReceiver")));
 
+            String ruta = lectura.next();
+            try (FileReader fr = new FileReader(ruta)) {
+                    BufferedReader br = new BufferedReader(fr);
+                    // Lectura del archivo
+
+                    
+                    String linea;
+                    while((linea=br.readLine())!=null)
+                           System.out.println(linea);
+                     }
+                     catch(Exception e){
+                        e.printStackTrace();
+                     }
+
             try {
                 Scanner scanner = new Scanner(System.in);
                 String msg;
